@@ -17,6 +17,24 @@
 			 smooth-scrolling
 			 ;; ---- theme ----
 			 soft-stone-theme
+			 ;; ---- ehenced M-x ----
+			 swiper
+			 ;; ----- swiper needs this ----
+			 counsel
+			 ;; -----markdown mode smartparens needs ----
+			 markdown-mode
+			 ;; ---- auto complete () ----
+			 smartparens
+			 ;; ----- pop win to open file ---
+			 popwin
+                         ;; ----- flycheck to tip my source file syntax error ---
+                         flycheck
+                         flycheck-ycmd
+                         ;; ---- ycmd and it dependency package ---
+                         ycmd
+                         company-ycmd
+                         ;; ---- magit inner git management----
+                         magit
 			 ) "NNERO packages")
 
 (setq package-selected-packages nnero/packages)
@@ -24,7 +42,7 @@
 ;;define function: packages install when pkg is not installed then install
 (defun nnero/packages-installed-p()
   (loop for pkg in nnero/packages
-	when (not (package-installed-p pkg)) do (return null)
+	when (not (package-installed-p pkg)) do (return nil)
 	finally (return t)))
 
 ;;run code to install packages when is not installed
@@ -37,3 +55,4 @@
 
 ;;export
 (provide 'init-packages)
+;;; init-packages.el ends here

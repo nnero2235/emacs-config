@@ -10,7 +10,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (smooth-scrolling soft-stone-theme github-theme anti-zenburn-theme company))))
+    (company-ycmd ycmd smooth-scrolling soft-stone-theme github-theme anti-zenburn-theme company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,3 +29,4 @@
 (require 'init-ui)
 (require 'init-default)
 (require 'init-keymap)
+

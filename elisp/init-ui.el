@@ -12,6 +12,9 @@
 ;; show global line number
 (global-linum-mode t)
 
+;; enabled () auto complete
+(electric-pair-mode t)
+
 ;;change cursor to thick
 (setq-default cursor-type 'bar)
 
@@ -21,8 +24,12 @@
 ;;high-light current cursor line
 (global-hl-line-mode 1)
 
-;;font consolas size:14
+;;font consolas size:14 and font chinese
 (set-default-font "Consolas-14")
+(set-fontset-font "fontset-default" 'chinese-gbk "微软雅黑")
+
+;;set full screen when start
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 ;;export
 (provide 'init-ui)
